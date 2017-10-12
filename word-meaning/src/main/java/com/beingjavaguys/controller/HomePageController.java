@@ -96,7 +96,7 @@ public class HomePageController {
 	@RequestMapping("/wordList")
 	public ModelAndView listUsers() {
 		RestTemplate restTemplate = new RestTemplate();
-		String url = "http://localhost:8090/word-meaning/words/";
+		String url = "http://localhost:8888/word-meaning/words/";
 		@SuppressWarnings("unchecked")
 		List<Wordi> users = restTemplate.getForObject(url, List.class);
 		return new ModelAndView("wordList", "wordList", users);
